@@ -3,8 +3,13 @@ import streamlit as st
 from mistralai import Mistral
 
 # Obtenir la clé API à partir des variables d'environnement
-api_key = os.environ["MISTRAL_API_KEY"]
+api_key = os.environ.get("tjyXiDGjeI1mw4ws5o0P2LSHcpXI75PZ") 
 model = "mistral-large-latest"
+
+# Vérifier si la clé API est définie
+if api_key is None:
+    st.error("La clé API Mistral n'est pas définie dans les variables d'environnement.")
+    st.stop()  # Arrêter l'application si la clé API n'est pas disponible
 
 # Initialiser le client Mistral
 client = Mistral(api_key=api_key)
