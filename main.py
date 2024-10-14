@@ -1,32 +1,23 @@
 import streamlit as st
-from Mistral import *
-# Import the appropriate client library for Mistral API (hypothetical)
-# from mistral_sdk import Mistral  # Example, adjust according to the actual SDK
+from mistral_sdk import Mistral  # Ajuste le nom selon la documentation
 
 def generate_response(user_input):
     api_key = "tjyXiDGjeI1mw4ws5o0P2LSHcpXI75PZ"
     model = "mistral-large-latest"
-
-    # Initialize the client (example)
-    client = Mistral(api_key=api_key)
+    
+    client = Mistral(api_key=api_key)  # Assure-toi que cela fonctionne
 
     try:
-        #
         chat_response = client.chat.complete(
             model=model,
-            messages=[
-                {
-                    "role": "user",
-                    "content": user_input,  
-                },
-            ]
+            messages=[{"role": "user", "content": user_input}]
         )
-
         return chat_response['choices'][0]['message']['content']
-
     except Exception as e:
-        # Handle errors and return an error message
         return f"Erreur : {str(e)}"
+
+# Le reste de ton code Streamlit ici...
+
 
 
 # Titre de l'application
