@@ -3,7 +3,7 @@ import streamlit as st
 from mistralai import Mistral
 
 # Obtenir la clé API à partir des variables d'environnement
-api_key = os.environ.get("oeB3B5FU1Xkk21r24YXs4cHbZTBkMGxU") 
+api_key = os.environ.get("VOTRE CLE API") 
 model = "mistral-large-latest"
 
 # Vérifier si la clé API est définie
