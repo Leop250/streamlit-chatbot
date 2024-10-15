@@ -3,7 +3,7 @@ import streamlit as st
 # from mistral_sdk import Mistral  # Example, adjust according to the actual SDK
 
 def generate_response(user_input):
-    api_key = "tjyXiDGjeI1mw4ws5o0P2LSHcpXI75PZ"
+    api_key = "VOTRE CLE API"
     model = "mistral-large-latest"
 
     # Initialize the client (example)
